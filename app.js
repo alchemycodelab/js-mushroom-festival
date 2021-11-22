@@ -89,8 +89,5 @@ addMushroomButton.addEventListener('click', () => {
     }
 });
 
-
-
 displayFriends();
-
 displayMushrooms();
