@@ -46,7 +46,7 @@ function displayFriends() {
                 friendInState.satisfaction++;
                 mushroomCount--;
         
-                displayFriends(friendData);
+                displayFriends();
                 displayMushrooms();    
             }
         });
@@ -74,7 +74,7 @@ addFriendButton.addEventListener('click', () => {
 
     friendInputEl.value = '';
 
-    displayFriends(friendData);
+    displayFriends();
 });
 
 
