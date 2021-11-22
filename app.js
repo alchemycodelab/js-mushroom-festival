@@ -30,10 +30,10 @@ const friendData = [
     },
 ];
 
-function renderFreinds(friends) {
+function displayFriends() {
     friendsEl.textContent = '';
 
-    for (let friend of friends) {
+    for (let friend of friendData) {
         const friendEl = renderFriend(friend);
 
         friendEl.addEventListener('click', () => {
@@ -46,8 +46,8 @@ function renderFreinds(friends) {
                 friendInState.satisfaction++;
                 mushroomCount--;
         
-                renderFreinds(friendData);
-                renderMushrooms();    
+                displayFriends(friendData);
+                displayMushrooms();    
             }
         });
 
@@ -56,7 +56,7 @@ function renderFreinds(friends) {
 }
 
 
-function renderMushrooms() { 
+function displayMushrooms() { 
     mushroomsEl.textContent = '';
 
     for (let i = 0; i < mushroomCount; i++) {
@@ -74,7 +74,7 @@ addFriendButton.addEventListener('click', () => {
 
     friendInputEl.value = '';
 
-    renderFreinds(friendData);
+    displayFriends(friendData);
 });
 
 
@@ -83,7 +83,7 @@ addMushroomButton.addEventListener('click', () => {
         alert('found a mushroom!');
 
         mushroomCount++;
-        renderMushrooms();
+        displayMushrooms();
     } else {
         alert('no luck!');
     }
@@ -91,6 +91,6 @@ addMushroomButton.addEventListener('click', () => {
 
 
 
-renderFreinds(friendData);
+displayFriends();
 
-renderMushrooms();
+displayMushrooms();
